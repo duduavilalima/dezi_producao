@@ -1,0 +1,13 @@
+version: '3'
+services:
+  fasolti-rabbitmq:
+    image: "docker.fasolti.com.br/rabbitmq"
+    hostname: fasolti-rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - $PWD/rabbitmq:/var/lib/rabbitmq"
+    environment:
+     - RABBITMQ_DEFAULT_USER=admin
+     - RABBITMQ_DEFAULT_PASS=admin
